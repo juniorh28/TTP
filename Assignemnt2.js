@@ -88,16 +88,46 @@ const cb5 = (args) => {
 
 console.log(myEvery(arr));
 
-//6.reduce()
+//6.reduce() //skiped for now
+console.log("\nthis is part 6");
+const reducer = (accumulator, currentValue) => accumulator + currentValue;
+function myReduce(arr) {
+  for (let i = 0; i < arr.length; i++) {}
+}
+const cb6 = (args) => {};
 
 //7.includes()
+console.log("\nthis is part 7");
+function myIncludes(arr, n) {
+  let isThere = false;
+  for (let i = 0; i < arr.length; i++) {
+    if (cb7(arr[i], n)) {
+      isThere = true;
+    }
+  }
+  return isThere;
+}
+
+const cb7 = (args, n) => {
+  if (args === n) {
+    return true;
+  } else return false;
+};
+console.log(myIncludes(arr, 3));
+console.log(myIncludes(arr, "tiger"));
+console.log(myIncludes(arr, 33));
 
 //8.indexOf()
+console.log("\nthis is part 8");
 
 //9.push()
+console.log("\nthis is part 9");
 
 //10.lastIndexOf()
+console.log("\nthis is part 10");
 
 //11.Object.keys()
+console.log("\nthis is part 11");
 
 //12.Object.values()
+console.log("\nthis is part 12");
