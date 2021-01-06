@@ -157,7 +157,7 @@ console.log(arr);
 
 //10.lastIndexOf()
 console.log("\nthis is part 10");
-function myLastIndexOf(arr, value) {
+function myUnShift(arr, value) {
   let lastIndex;
   for (let i = arr.length - 1; i > 0; i--) {
     if (cb10(arr[i], value)) {
@@ -177,10 +177,11 @@ const cb10 = (args, value) => {
 };
 
 //const arr = [1, 2, 3, 4, 5, 6];
-console.log(myLastIndexOf(arr, 5));
-console.log(myLastIndexOf(arr, 2));
-console.log(myLastIndexOf(arr, 3));
-console.log(myLastIndexOf(arr, 555));
+console.log(myUnShift(arr, 5));
+console.log(myUnShift(arr, 2));
+console.log(myUnShift(arr, 3));
+console.log(myUnShift(arr, 555));
+
 //11.Object.keys()
 console.log("\nthis is part 11");
 
