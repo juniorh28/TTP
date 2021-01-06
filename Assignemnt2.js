@@ -88,8 +88,8 @@ const cb5 = (args) => {
 
 console.log(myEvery(arr));
 
-//6.reduce() //skiped for now
-console.log("\nthis is part 6");
+//6.reduce() //skipped for now
+console.log("\nthis is part 6 which is skipped");
 const reducer = (accumulator, currentValue) => accumulator + currentValue;
 function myReduce(arr) {
   for (let i = 0; i < arr.length; i++) {}
@@ -146,6 +146,13 @@ console.log(myIndexOf(arr, 4));
 
 //9.push()
 console.log("\nthis is part 9");
+function myPush(arr, value) {
+  arr = arr.concat(value);
+  return arr.length;
+}
+
+console.log(myPush(arr, 7));
+console.log(arr);
 
 //10.lastIndexOf()
 console.log("\nthis is part 10");
