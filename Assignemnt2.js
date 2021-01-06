@@ -71,6 +71,22 @@ const cb4 = (args) => {
 console.log(mySome(arr));
 
 //5.every()
+console.log("\nthis is part 5");
+function myEvery(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    if (!cb5(arr[i])) {
+      return false;
+    }
+  }
+  return true;
+}
+const cb5 = (args) => {
+  if (typeof args === "number" && args * 2 < 10) {
+    return true;
+  } else return false;
+};
+
+console.log(myEvery(arr));
 
 //6.reduce()
 
