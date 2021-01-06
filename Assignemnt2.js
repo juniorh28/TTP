@@ -119,6 +119,29 @@ console.log(myIncludes(arr, 33));
 
 //8.indexOf()
 console.log("\nthis is part 8");
+function myIndexOf(arr, value, startPos) {
+  let i;
+  if (startPos === null) {
+    i = 0;
+  } else {
+    i = startPos;
+  }
+  for (i; i < arr.length; i++) {
+    if (cb8(arr[i], value)) {
+      return i;
+    }
+  }
+  return -1;
+}
+
+const cb8 = (args, value) => {
+  if (args === value) {
+    return true;
+  }
+};
+
+console.log(myIndexOf(arr, 5, 2));
+console.log(myIndexOf(arr, 9, 2));
 
 //9.push()
 console.log("\nthis is part 9");
