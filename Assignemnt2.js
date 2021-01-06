@@ -185,5 +185,29 @@ console.log(myUnShift(arr, 555));
 //11.Object.keys()
 console.log("\nthis is part 11");
 
+const object = { a: 1, b: 2, c: 3 };
+
+//must return array
+function grabKeys(obj) {
+  let keys = [];
+  for (const property in obj) {
+    keys = keys.concat(property);
+  }
+  console.log(keys);
+  return keys;
+}
+
+grabKeys(object);
+
 //12.Object.values()
 console.log("\nthis is part 12");
+function grabValues(obj) {
+  let values = [];
+  for (const property in obj) {
+    values = values.concat(obj[property]);
+  }
+  console.log(values);
+  return values;
+}
+
+grabValues(object);
