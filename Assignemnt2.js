@@ -5,7 +5,7 @@ const arr = [1, 2, 3, 4, 5, 6];
 //forEach() method will iterate through the array without mutating it.
 //1. Create a forEach function called myEach with callback.
 console.log("this is part 1");
-function myEach(array, cb) {
+function myEach(array) {
   for (let i = 0; i < array.length; i++) {
     cb(array[i]);
   }
@@ -15,11 +15,11 @@ const cb = (arg) => {
   console.log(arg);
 };
 
-myEach(arr, cb);
+myEach(arr);
 
 //2.map()
 console.log("\nthis is part 2");
-function myMap(arr, cb2) {
+function myMap(arr) {
   const returnArr = [];
   for (let i = 0; i < arr.length; i++) {
     let element = arr[i];
@@ -33,11 +33,11 @@ const cb2 = (args) => {
   return args * 2;
 };
 
-myMap(arr, cb2);
+myMap(arr);
 
 //3.filter()
 console.log("\nthis is part 3");
-function myFilter(arr, cb3) {
+function myFilter(arr) {
   let newList = [];
   for (let i = 0; i < arr.length; i++) {
     if (cb3(arr[i])) newList.push(arr[i]);
@@ -52,9 +52,23 @@ const cb3 = (args) => {
   }
 };
 
-myFilter(arr, cb3);
+myFilter(arr);
 
 //4.some()
+console.log("\nthis is part 4");
+function mySome(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    if (cb4(arr[i])) return true;
+  }
+  return false;
+}
+
+const cb4 = (args) => {
+  if (typeof args === "string") return true;
+  else return false;
+};
+
+console.log(mySome(arr));
 
 //5.every()
 
