@@ -10,6 +10,7 @@ function myEach(array, cb) {
     cb(array[i]);
   }
 }
+
 const cb = (arg) => {
   console.log(arg);
 };
@@ -36,6 +37,22 @@ myMap(arr, cb2);
 
 //3.filter()
 console.log("\nthis is part 3");
+function myFilter(arr, cb3) {
+  let newList = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (cb3(arr[i])) newList.push(arr[i]);
+  }
+  console.log(newList);
+  return newList;
+}
+
+const cb3 = (args) => {
+  if (args <= 4) {
+    return true;
+  }
+};
+
+myFilter(arr, cb3);
 
 //4.some()
 
