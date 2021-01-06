@@ -94,7 +94,7 @@ const reducer = (accumulator, currentValue) => accumulator + currentValue;
 function myReduce(arr) {
   for (let i = 0; i < arr.length; i++) {}
 }
-const cb6 = (args) => {};
+const cb6 = (accumulator, currentValue) => {};
 
 //7.includes()
 console.log("\nthis is part 7");
@@ -121,7 +121,7 @@ console.log(myIncludes(arr, 33));
 console.log("\nthis is part 8");
 function myIndexOf(arr, value, startPos) {
   let i;
-  if (startPos === null) {
+  if (startPos === undefined) {
     i = 0;
   } else {
     i = startPos;
@@ -142,13 +142,37 @@ const cb8 = (args, value) => {
 
 console.log(myIndexOf(arr, 5, 2));
 console.log(myIndexOf(arr, 9, 2));
+console.log(myIndexOf(arr, 4));
 
 //9.push()
 console.log("\nthis is part 9");
 
 //10.lastIndexOf()
 console.log("\nthis is part 10");
+function myLastIndexOf(arr, value) {
+  let lastIndex;
+  for (let i = arr.length - 1; i > 0; i--) {
+    if (cb10(arr[i], value)) {
+      lastIndex = i;
+      return lastIndex;
+    }
+  }
+  return -1;
+}
 
+const cb10 = (args, value) => {
+  if (args === value) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
+//const arr = [1, 2, 3, 4, 5, 6];
+console.log(myLastIndexOf(arr, 5));
+console.log(myLastIndexOf(arr, 2));
+console.log(myLastIndexOf(arr, 3));
+console.log(myLastIndexOf(arr, 555));
 //11.Object.keys()
 console.log("\nthis is part 11");
 
