@@ -148,6 +148,7 @@ console.log(myIndexOf(arr, 4));
 console.log("\nthis is part 9");
 function myPush(arr, value) {
   arr = arr.concat(value);
+  console.log(arr);
   return arr.length;
 }
 
