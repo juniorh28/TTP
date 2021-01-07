@@ -97,8 +97,9 @@ console.log(myEvery(arr));
 console.log("\nthis is part 6 which is skipped");
 const reducer = (accumulator, currentValue) => accumulator + currentValue;
 
-function myReduce(arr, cb6, initalValue) {
+function myReduce(reducer, arr, initalValue) {
     let accumulator;
+    //let value=initalValue;
     let currentValue;
     if (!initalValue == undefined) {
         accumulator = arr[0];
@@ -106,9 +107,11 @@ function myReduce(arr, cb6, initalValue) {
         accumulator = initalValue;
     }
     for (let i = 0; i < arr.length; i++) {
-        cb6(accumulator, currentValue, i, arr)
+        currentValue = arr[i]
+        accumulator = reducer(accumulator, currentValue)
     }
 }
+/*
 const cb6 = (accumulator, currentValue, index, arr) => {
     if (initalValue === undefined) {
         accumulator = 0;
@@ -121,6 +124,7 @@ const cb6 = (accumulator, currentValue, index, arr) => {
         index = 0;
     }
 };
+*/
 
 //7.includes()
 console.log("\nthis is part 7");
